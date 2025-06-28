@@ -492,7 +492,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-1.png" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -511,7 +510,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-2.png" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -530,7 +528,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-3.png" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -549,7 +546,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-4.png" class="glightbox preview-link" data-gallery="portfolio-gallery-brand"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -568,7 +564,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-5.png" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -587,7 +582,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/project-6.png" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
-                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -957,23 +951,23 @@ I turned my passion for anime and design into a freelance venture on Fiverr, cre
             <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
               <div class="card-body p-4 p-lg-5">
 
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <form id="contact-form" class="php-email-form" action="javascript:void(0);">
                   <div class="row gy-4">
 
                     <div class="col-12">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                      <input type="text"  name="name" id="name-field"  class="form-control" placeholder="Your Name" required="">
                     </div>
 
                     <div class="col-12 ">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                      <input type="email" class="form-control" name="email" id="email-field" placeholder="Your Email" required="">
                     </div>
 
                     <div class="col-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      <input type="text" class="form-control" name="subject" id="subject-field" placeholder="Subject" required="">
                     </div>
 
                     <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                      <textarea class="form-control" name="message" rows="6"  id="message-field" placeholder="Message" required=""></textarea>
                     </div>
 
                     <div class="col-12 text-center">
@@ -1037,6 +1031,22 @@ I turned my passion for anime and design into a freelance venture on Fiverr, cre
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+   <!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Initialize EmailJS ONCE -->
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "jAXM3T_OJj5XW2ME2", 
+    });
+  })();
+</script>
+
+<!-- Contact Form JS (after emailjs is loaded) -->
+<script src="assets/js/ContactForm.js"></script> 
+
 
 </body>
 
